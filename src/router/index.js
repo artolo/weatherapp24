@@ -11,8 +11,8 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'About',
+    path: '/more/:place',
+    name: 'More',
     component: () => import('../views/weathermore.vue')
   }
 ]

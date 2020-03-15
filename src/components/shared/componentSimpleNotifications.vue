@@ -5,12 +5,12 @@
     <div class="componentsimple__notyfications_box_data">
       <ul>
         <li><h1>Date:</h1> <p>{{ date }}</p></li>
-        <li><h1>Location:</h1> <p>{{ location }}</p></li>
+        <li><h1>Location:</h1> <p>{{ location }}, {{ country }}</p></li>
         <li><h1>Descriptions:</h1> <p>{{ descriptions }}</p></li>
       </ul>
     </div>
     <div class="componentsimple__notyfications_box_more">
-      <router-link :to="'about'"> MORE </router-link>
+      <router-link v-if="value" :to="{ name: 'More', params: { place: value.toLowerCase() } }"> MORE </router-link>
     </div>
   </div>
 </div>
@@ -20,8 +20,12 @@
 export default {
   name: 'componentSimpleNotifications',
   props: {
-    temperature: {
+    value: {
       type: String,
+      required: true
+    },
+    temperature: {
+      type: [Number, String],
       required: true
     },
     date: {
@@ -33,6 +37,10 @@ export default {
       required: true
     },
     descriptions: {
+      type: String,
+      required: true
+    },
+    country: {
       type: String,
       required: true
     }

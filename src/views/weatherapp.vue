@@ -1,6 +1,5 @@
 <template>
   <div class="weatherapp">
-    <component-background/>
     <header>
       <weatherapp-header :small-size="false"/>
     </header>
@@ -17,13 +16,15 @@
           :auto-complete="true"
           onfocus="value = ''"
         />
-        <button type="button"><p>CHECK</p></button>
+        <button type="button" @click="setValue"><p>CHECK</p></button>
       </div>
       <component-simple-notifications
-        :date="'15.03.2020'"
-        :descriptions="'Sunny'"
-        :location="'Częstochowa, PL'"
-        :temperature="'29'"
+        :date="weatherDate"
+        :descriptions="weatherDescription"
+        :location="weatherCityName"
+        :temperature="weatherTemp"
+        :country="weatherCityCountry"
+        :value="value"
       />
     </main>
     <footer>
@@ -37,21 +38,48 @@ import { VueGooglePlaces } from 'vue-google-places'
 import weatherappFooter from '@/components/layout/weatherappFooter.vue'
 import weatherappHeader from '@/components/layout/weatherappHeader.vue'
 import ComponentSimpleNotifications from '@/components/shared/componentSimpleNotifications'
-import ComponentBackground from '@/components/shared/componentBackground'
 
 export default {
   name: 'weather-app',
   components: {
-    ComponentBackground,
     ComponentSimpleNotifications,
     weatherappFooter,
     weatherappHeader,
     VueGooglePlaces
+
   },
   data () {
     return {
       value: ''
     }
+  },
+  computed: {
+    weatherCityName () {
+      return this.$store.getters.getOpenWeatherMapCityName
+    },
+    weatherCityCountry () {
+      return this.$store.getters.getOpenWeatherMapCityCountry
+    },
+    weatherDescription () {
+      return this.$store.getters.getOpenWeatherMapListDescription
+    },
+    weatherDate () {
+      return this.$store.getters.getOpenWeatherMapListDate
+    },
+    weatherTemp () {
+      return this.$store.getters.getOpenWeatherMapListTemp
+    }
+  },
+  methods: {
+    setValue: function () {
+      const location = this.value
+      return this.$store.dispatch('openWeatherMapGet', { location: location })
+    }
+  },
+  created () {
+    setTimeout(() => {
+      this.setValue()
+    }, 1000)
   }
 }
 </script>
