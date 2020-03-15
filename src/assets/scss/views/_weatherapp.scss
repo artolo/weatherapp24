@@ -1,7 +1,6 @@
 .weatherapp {
   &__background {
-    position: absolute;
+    position: fixed;
     z-index: -10;
-    height: 100vh;
   }
 }

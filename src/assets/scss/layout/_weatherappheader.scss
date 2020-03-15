@@ -61,14 +61,30 @@
     &_box {
       text-align: center;
       display: block;
-      &_logo {
-      }
       h2 {
         margin: 1rem auto 0 auto;
       }
       h1 {
         margin-top: 0;
         font-size: 5rem;
+        margin-right: 0;
+      }
+    }
+  }
+  @media only screen and (max-width: 370px) {
+    &_box {
+      &_logo {
+        width: 6rem;
+        height: 4rem;
+      }
+      h2 {
+        font-size: 2rem;
+        margin: auto;
+      }
+      h1 {
+        margin-top: 0;
+        font-size: 3rem;
+        margin-right: 0;
       }
     }
   }

@@ -9,8 +9,12 @@
       <weatherapp-header :small-size="false"/>
     </header>
     <main>
-      <div class="weatherapp__main">
-      </div>
+      <component-simple-notifications
+        :date="'15.03.2020'"
+        :descriptions="'Sunny'"
+        :location="'Częstochowa, PL'"
+        :temperature="'29'"
+      />
     </main>
     <footer>
       <weatherapp-footer/>
@@ -19,12 +23,14 @@
 </template>
 
 <script>
-import weatherappFooter from '@/components/weatherappFooter.vue'
-import weatherappHeader from '@/components/weatherappHeader.vue'
+import weatherappFooter from '@/components/layout/weatherappFooter.vue'
+import weatherappHeader from '@/components/layout/weatherappHeader.vue'
+import ComponentSimpleNotifications from '@/components/shared/componentSimpleNotifications'
 
 export default {
   name: 'weather-app',
   components: {
+    ComponentSimpleNotifications,
     weatherappFooter,
     weatherappHeader
   }

@@ -18,5 +18,5 @@ export default {
 </script>
 
 <style lang="scss">
-  @import "~@/assets/scss/shared/_weatherappfooter.scss";
+  @import "~@/assets/scss/layout/_weatherappfooter.scss";
 </style>
