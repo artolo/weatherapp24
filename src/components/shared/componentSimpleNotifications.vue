@@ -4,9 +4,9 @@
     <div class="componentsimple__notyfications_box_temperature"><h1>{{ temperature }}</h1><p>&nbsp;&#176;C</p></div>
     <div class="componentsimple__notyfications_box_data">
       <ul>
-        <li><h1>Date:</h1> <p>15.03.2020</p></li>
-        <li><h1>Location:</h1> <p>Częstochowa, PL</p></li>
-        <li><h1>Descriptions:</h1> <p>Sunny</p></li>
+        <li><h1>Date:</h1> <p>{{ date }}</p></li>
+        <li><h1>Location:</h1> <p>{{ location }}</p></li>
+        <li><h1>Descriptions:</h1> <p>{{ descriptions }}</p></li>
       </ul>
     </div>
     <div class="componentsimple__notyfications_box_more">

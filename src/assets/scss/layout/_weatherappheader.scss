@@ -9,6 +9,7 @@
     &_logo {
       width: 12rem;
       height: 9rem;
+      transition: all 0.5s ease;
       &--small {
         width: 6rem;
         height: 4rem;
@@ -56,24 +57,14 @@
       }
     }
   }
-  @media only screen and (max-width: 640px) {
-    padding-top: 3rem;
+  @media only screen and (max-width: 600px) {
+    padding-top: 5rem;
+    transition: all 0.5s ease;
     &_box {
       text-align: center;
       display: block;
-      h2 {
-        margin: 1rem auto 0 auto;
-      }
-      h1 {
-        margin-top: 0;
-        font-size: 5rem;
-        margin-right: 0;
-      }
-    }
-  }
-  @media only screen and (max-width: 370px) {
-    &_box {
       &_logo {
+        transition: all 0.5s ease;
         width: 6rem;
         height: 4rem;
       }

@@ -10,8 +10,8 @@ export default {
   name: 'weatherapp-footer',
   data () {
     return {
-      createdBy: 'created by © 2020',
-      artolo: '"Artolo" Bartosz Brącel'
+      createdBy: 'created by © 2020 ',
+      artolo: ' "Artolo" Bartosz Brącel'
     }
   }
 }
