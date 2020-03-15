@@ -1,13 +1,12 @@
+@import "~@/assets/scss/database.scss";
 .componentsimple__notyfications {
   &_box {
-    width: 50%;
+    @include pageWidth;
     margin: 0 auto;
     padding-top: 2rem;
     display: flex;
-    color: #fff;
     justify-content: center;
     background-color:rgba(192,192,192,0.3);
-    max-width: 50rem;
     padding-right: 1rem;
     &_temperature {
       text-align: center;

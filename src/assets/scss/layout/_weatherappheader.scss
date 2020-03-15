@@ -8,11 +8,10 @@
     padding: 1rem;
     &_logo {
       width: 12rem;
-      height: 9rem;
       transition: all 0.5s ease;
       &--small {
         width: 6rem;
-        height: 4rem;
+        margin-left: -10rem;
       }
     }
     h2 {
@@ -36,24 +35,26 @@
       h2 {
         font-weight: 500;
         font-style: italic;
-        margin-left: 2rem;
+        margin-left: 0.5rem;
+        margin-top: 1.2rem;
         color: #fff;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
       h1 {
         font-weight: 900;
         margin-top: 1rem;
-        font-size: 2rem;
+        font-size: 1.5rem;
         color: #fff;
-        margin-right: 2rem;
       }
     }
   }
   @media only screen and (max-width: 890px) {
     width: 80%;
     &_box {
-      &--small {
-        justify-content: center;
+      &_logo {
+        &--small {
+          margin-left: 0;
+        }
       }
     }
   }
@@ -76,6 +77,9 @@
         margin-top: 0;
         font-size: 3rem;
         margin-right: 0;
+      }
+      &--small {
+        justify-content: center;
       }
     }
   }

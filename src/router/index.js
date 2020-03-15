@@ -13,7 +13,7 @@ const routes = [
   {
     path: '/more/:place',
     name: 'More',
-    component: () => import('../views/weathermore.vue')
+    component: () => import('../views/weatherappMore.vue')
   }
 ]
 

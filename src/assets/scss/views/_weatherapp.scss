@@ -1,9 +1,9 @@
+@import "~@/assets/scss/database.scss";
 .weatherapp {
   &__places {
-    width: 50%;
+    @include pageWidth;
     margin: 3rem auto 2rem auto;
     display: flex;
-    max-width: 50rem;
     &_google {
       width: 60%;
       height: 3rem;

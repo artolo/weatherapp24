@@ -1,0 +1,56 @@
+@import "~@/assets/scss/database.scss";
+.weatherapp__more {
+  @include pageWidth;
+  margin: 0 auto;
+  text-align: center;
+  &_place{
+    display: inline-flex;
+    margin-top: 3rem;
+    height: 4rem;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    &_date {
+      @include fullCenter;
+      padding-left: 2rem;
+      display: flex;
+      h1 {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+      p {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+    &_location {
+      @include fullCenter;
+      padding-right: 2rem;
+      display: flex;
+      h1 {
+        font-size: 1rem;
+        font-weight: 900;
+      }
+      p {
+        margin-left: 0.5rem;
+        font-size: 1rem;
+        font-weight: 300;
+      }
+    }
+  }
+  @media only screen and (max-width: 1080px) {
+    width: 80%;
+  }
+  @media only screen and (max-width: 450px) {
+    &_place{
+      display: grid;
+      &_date {
+        padding-left: 0;
+      }
+      &_location {
+        padding-right: 0;
+      }
+    }
+  }
+}

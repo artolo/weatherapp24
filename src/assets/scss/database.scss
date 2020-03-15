@@ -1,0 +1,12 @@
+$base-color-white: #ffffff;
+
+@mixin pageWidth {
+  width: 50%;
+  max-width: 50rem;
+  color: $base-color-white;
+}
+@mixin fullCenter {
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,9 +1,9 @@
+@import "~@/assets/scss/database.scss";
 .weatherapp__footer {
+  @include pageWidth;
   display: flex;
   margin: 10rem auto 0 auto;
-  width: 50%;
   justify-content: center;
-  color: #fff;
   opacity: 0.6;
   &_create {
     font-weight: 300;
