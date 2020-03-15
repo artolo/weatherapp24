@@ -1,0 +1,18 @@
+.weatherapp__footer {
+  display: flex;
+  margin: 10rem auto 0 auto;
+  width: 50%;
+  justify-content: center;
+  color: #fff;
+  opacity: 0.6;
+  &_create {
+    font-weight: 300;
+  }
+  &_artolo {
+    font-weight: 900;
+  }
+  @media only screen and (max-width: 640px) {
+    display: block;
+    text-align: center;
+  }
+}
