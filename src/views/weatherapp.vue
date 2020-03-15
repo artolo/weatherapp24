@@ -4,6 +4,9 @@
       <weatherapp-header :small-size="false"/>
     </header>
     <main>
+      <div class="weatherapp__text">
+        Check the weather! Enter the city name, or <b>leave empty for geolocation</b>
+      </div>
       <div class="weatherapp__places">
         <VueGooglePlaces
           :api-key="'AIzaSyB_DBJcX1L9inF5_grYupjuWmjVQ0SkYtM'"
@@ -27,15 +30,11 @@
         :value="value"
       />
     </main>
-    <footer>
-      <weatherapp-footer/>
-    </footer>
   </div>
 </template>
 
 <script>
 import { VueGooglePlaces } from 'vue-google-places'
-import weatherappFooter from '@/components/layout/weatherappFooter.vue'
 import weatherappHeader from '@/components/layout/weatherappHeader.vue'
 import ComponentSimpleNotifications from '@/components/shared/componentSimpleNotifications'
 
@@ -43,7 +42,6 @@ export default {
   name: 'weather-app',
   components: {
     ComponentSimpleNotifications,
-    weatherappFooter,
     weatherappHeader,
     VueGooglePlaces
 
@@ -61,13 +59,13 @@ export default {
       return this.$store.getters.getOpenWeatherMapCityCountry
     },
     weatherDescription () {
-      return this.$store.getters.getOpenWeatherMapListDescription
+      return this.$store.getters.getOpenWeatherMapDescription
     },
     weatherDate () {
-      return this.$store.getters.getOpenWeatherMapListDate
+      return this.$store.getters.getOpenWeatherMapDate
     },
     weatherTemp () {
-      return this.$store.getters.getOpenWeatherMapListTemp
+      return this.$store.getters.getOpenWeatherMapTemp
     }
   },
   methods: {

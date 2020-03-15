@@ -1,7 +1,7 @@
 <template>
 <div class="componentsimple__notyfications">
   <div class="componentsimple__notyfications_box">
-    <div class="componentsimple__notyfications_box_temperature"><h1>{{ temperature }}</h1><p>&nbsp;&#176;C</p></div>
+    <div class="componentsimple__notyfications_box_temperature"><h1>{{ temperature }}</h1><p v-if="temperature">&nbsp;&#176;C</p></div>
     <div class="componentsimple__notyfications_box_data">
       <ul>
         <li><h1>Date:</h1> <p>{{ date }}</p></li>

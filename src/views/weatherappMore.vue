@@ -7,20 +7,17 @@
     <div class="weatherapp__more_place">
       <div class="weatherapp__more_place_date">
         <h1>Date:</h1>
-        <p>22.05.2020</p>
+        <p>{{ weatherTime }}</p>
       </div>
       <div class="weatherapp__more_place_location">
         <h1>Location:</h1>
-        <p>Poznań</p>
+        <p>{{weatherName}}, {{ weatherCountry }}</p>
       </div>
     </div>
     </section>
     <section>
       <component-table-notifications
-        :date="'data'"
-        :descriptions="'data'"
-        :temperature="'data'"
-      />
+      :items="weatherList"/>
     </section>
   </div>
 </template>
@@ -33,8 +30,29 @@ export default {
     ComponentTableNotifications,
     weatherappHeader
   },
-  goBack () {
-    this.$router.push('/')
+  computed: {
+    weatherName () {
+      return this.$store.getters.getOpenWeatherMapCityName
+    },
+    weatherCountry () {
+      return this.$store.getters.getOpenWeatherMapCityCountry
+    },
+    weatherTime () {
+      return this.$store.getters.getOpenWeatherMapDate
+    },
+    weatherList () {
+      return this.$store.getters.getOpenWeatherMapListList
+    }
+  },
+  methods: {
+    getWeatherMap: function () {
+      this.$store.dispatch('openWeatherMapGet', { location: this.$route.params.place })
+    }
+  },
+  created () {
+    setTimeout(() => {
+      this.getWeatherMap()
+    }, 1000)
   }
 }
 </script>

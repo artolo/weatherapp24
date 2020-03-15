@@ -38,4 +38,16 @@
       }
     }
   }
+  @media only screen and (max-width: 645px) {
+    &_table {
+      &_box {
+        &_hour, &_temperature, &_description {
+          height: 4rem;
+        }
+        &_description {
+          padding: 1rem;
+        }
+      }
+    }
+  }
 }

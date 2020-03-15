@@ -1,5 +1,6 @@
 @import "~@/assets/scss/database.scss";
 .weatherapp {
+  text-shadow: 2px 2px rgb(0, 0, 0, 0.3);
   &__places {
     @include pageWidth;
     margin: 3rem auto 2rem auto;
@@ -26,11 +27,13 @@
       }
     }
     button {
+      text-shadow: 2px 2px rgb(0, 0, 0, 0.3);
       width: 35%;
       height: 3rem;
       margin-left: auto;
       background-color: rgb(255, 255, 255, 0.5);
       transition: all 0.5s ease;
+
       &:focus {
         outline: none !important;
         transition: all 0.5s ease;
@@ -44,6 +47,19 @@
         font-weight: 900;
         color: white;
       }
+    }
+  }
+  &__text {
+    @include fullCenter;
+    text-align: center;
+    margin: 2rem auto;
+    font-size: 1.2rem;
+    width: 50%;
+    font-weight: 300;
+    color: $base-color-white;
+    opacity: 0.6;
+    b {
+      font-weight: 900;
     }
   }
   @media only screen and (max-width: 1080px) {

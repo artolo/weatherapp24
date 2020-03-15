@@ -1,5 +1,6 @@
 @import "~@/assets/scss/database.scss";
 .componentsimple__notyfications {
+  text-shadow: 2px 2px rgb(0, 0, 0, 0.3);
   &_box {
     @include pageWidth;
     margin: 0 auto;
@@ -36,7 +37,7 @@
           }
           p {
             text-align: center;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 300;
             margin: 0.5rem auto auto 1rem;
           }
@@ -54,6 +55,12 @@
         text-decoration: none;
         font-weight: 900;
         color: white;
+        transition: all 0.5s ease;
+        opacity: 0.5;
+        &:hover {
+          transition: all 0.5s ease;
+          opacity: 1;
+        }
       }
     }
   }

@@ -5,8 +5,9 @@
         :class="!smallSize ? 'weatherapp__header_box_logo' : 'weatherapp__header_box_logo--small'"
         src="../../assets/img/weather_logo.png"
         alt="logo"
+        @click="goBack"
       >
-      <h2>{{ weatherApp }}</h2><h1>{{ hours }}</h1>
+      <h2 @click="goBack">{{ weatherApp }}</h2><h1 @click="goBack">{{ hours }}</h1>
     </div>
   </div>
 </template>
@@ -24,6 +25,11 @@ export default {
     smallSize: {
       type: Boolean,
       required: true
+    }
+  },
+  methods: {
+    goBack () {
+      this.$router.push('/')
     }
   }
 }
