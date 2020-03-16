@@ -7,7 +7,8 @@
         alt="logo"
         @click="goBack"
       >
-      <h2 @click="goBack">{{ weatherApp }}</h2><h1 @click="goBack">{{ hours }}</h1>
+      <h2 @click="goBack">{{ weatherApp }}</h2>
+      <h1 @click="goBack">{{ hours }}</h1>
     </div>
   </div>
 </template>

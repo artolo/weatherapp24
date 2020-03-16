@@ -70,7 +70,6 @@
       padding-top: 0;
       width: 80%;
       &_temperature {
-        margin-left: 2rem;
         padding: 0;
         justify-content: center;
         height: 7rem;
@@ -95,6 +94,11 @@
   }
   @media only screen and (max-width: 500px) {
     &_box {
+      &_temperature {
+        h1, p {
+          margin-top: 1rem;
+        }
+      }
       &_data {
         ul {
           padding: inherit;

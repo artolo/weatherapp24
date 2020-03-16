@@ -1,5 +1,5 @@
 <template>
-  <div class="component__backgraund" style="overflow-x: hidden !important;">
+  <div class="component__backgraund">
     <img
       class="weatherapp__background_photo"
       src="../../assets/img/weather_background.jpg"
