@@ -14,6 +14,11 @@ const routes = [
     path: '/more/:place',
     name: 'More',
     component: () => import('../views/weatherappMore.vue')
+  },
+  {
+    path: '*',
+    name: '404',
+    component: () => import('../views/weatherapp404.vue')
   }
 ]
 

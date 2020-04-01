@@ -1,6 +1,6 @@
 @import "~@/assets/scss/database.scss";
 .weatherapp__more {
-  text-shadow: 2px 2px rgb(0, 0, 0, 0.3);
+  text-shadow: 1px 1px rgb(0, 0, 0, 0.3);
   @include pageWidth;
   margin: -3.6rem auto 0 auto;
   text-align: center;
@@ -20,8 +20,8 @@
       }
       p {
         margin-left: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: 300;
+        font-size: 1.4rem;
+        font-weight: 500;
       }
     }
     &_location {
@@ -34,13 +34,27 @@
       }
       p {
         margin-left: 0.5rem;
-        font-size: 1.1rem;
-        font-weight: 300;
+        font-size: 1.4rem;
+        font-weight: 500;
       }
     }
   }
   @media only screen and (max-width: 1080px) {
     width: 80%;
+  }
+  @media only screen and (max-width: 600px) {
+    &_place{
+      &_date {
+        p {
+          font-size: 1.1rem;
+        }
+      }
+      &_location {
+        p {
+          font-size: 1.1rem;
+        }
+      }
+    }
   }
   @media only screen and (max-width: 500px) {
     &_place{

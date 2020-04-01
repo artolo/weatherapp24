@@ -1,7 +1,7 @@
 <template>
   <div class="weatherapp">
     <header>
-      <weatherapp-header :small-size="false"/>
+      <weatherapp-header :small-size="false" :visible="false"/>
     </header>
     <main>
       <div class="weatherapp__text">
@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import { VueGooglePlaces } from 'vue-google-places'
+import { GooglePlaces } from '@/googlePlaces'
 import weatherappHeader from '@/components/layout/weatherappHeader.vue'
 import ComponentSimpleNotifications from '@/components/shared/componentSimpleNotifications'
 
@@ -43,7 +43,7 @@ export default {
   components: {
     ComponentSimpleNotifications,
     weatherappHeader,
-    VueGooglePlaces
+    VueGooglePlaces: GooglePlaces
 
   },
   data () {

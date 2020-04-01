@@ -1,7 +1,12 @@
 <template>
   <div class="weatherapp__more">
     <header>
-      <weatherapp-header :small-size="true"/>
+      <weatherapp-header
+        :small-size="true"
+        :visible="true"
+        :name="'back'"
+        :small-button="true"
+      />
     </header>
     <section>
     <div class="weatherapp__more_place">

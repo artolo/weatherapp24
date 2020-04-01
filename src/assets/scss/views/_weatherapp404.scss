@@ -1,0 +1,40 @@
+@import "~@/assets/scss/database.scss";
+
+.weatherapp__404 {
+  &_text {
+    margin: 10rem 0;
+    text-align: center;
+    h1 {
+      font-size: 8rem;
+      font-weight: bold;
+      margin-bottom: 0;
+      color: #fff;
+      text-shadow: 4px 4px rgb(0,0,0,0.2);
+    }
+    p {
+      color: #fff;
+      font-size: 3rem;
+      font-weight: 200;
+    }
+    button {
+      margin: 2rem 0;
+      cursor: pointer;
+      border: none;
+      width: 10rem;
+      height: 4rem;
+      background-color: #fff;
+      font-size: 1.1rem;
+      opacity: 0.6;
+      color: black;
+      transition: all 0.2s ease-out;
+      text-transform: uppercase;
+      font-weight: 900;
+      outline: none;
+      border-radius: 5px;
+      &:hover {
+        transition: all 0.2s ease-out;
+        opacity: 1;
+      }
+    }
+  }
+}

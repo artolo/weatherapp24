@@ -5,7 +5,7 @@ import store from './store'
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Vuetify from 'vuetify/lib'
-import { VuetifyGooglePlaces } from 'vue-google-places'
+import { VuetifyGooglePlaces } from './googlePlaces'
 
 Vue.use(Vuetify)
 Vue.use(VueAxios, axios)
